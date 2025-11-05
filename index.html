@@ -2,15 +2,22 @@
 <html>
 <head>
   <title>Associate Form Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    html, body {
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
       margin: 0;
-      padding: 0;
-      height: 100%;
       font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .container {
       display: flex;
       flex-direction: row;
-      background-color: #f0f0f0;
+      height: 100vh;
     }
 
     .left-panel {
@@ -21,6 +28,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      justify-content: center;
     }
 
     .logo {
@@ -42,7 +50,8 @@
       color: white;
       text-decoration: none;
       border-radius: 8px;
-      width: 250px;
+      width: 100%;
+      max-width: 250px;
       transition: background-color 0.3s;
     }
 
@@ -56,14 +65,39 @@
       background-size: cover;
       background-position: center;
     }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left-panel {
+        align-items: center;
+        text-align: center;
+      }
+
+      .button {
+        margin: 10px auto;
+      }
+
+      .logo {
+        margin: 0 auto 20px;
+      }
+
+      .right-panel {
+        height: 300px;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="left-panel">
-    <img src="https://example.com/avolta-logo.png" alt="Avolta Logo" class="1>
-    <a class="button" href="https://formsrmReport Lost Item</a>
-    <a class="button" href="https://forms.office.com/r/inventoryCountsForm" targetbutton" href="https://forms.office.com/r/drinkOrderForm" targettton" href="https://forms.office.com/r//a>
+  <div class="container">
+    <div class="left-panel">
+      <img src="https://example.com/avolta-logo.png" alt="Avolta LogoForm Hub</h1>
+      <a class="button" href="https://forms.office.com/r/lostItemForm   <a class="button" href="https://forms.office.com/r/inventoryCountsForm" targetforms.office.com/r/drinkOrderFormDrink Order</a>
+      <a class="button" href="https://formsormFood Order</a>
+    </div>
+    <div class="right-panel"></div>
   </div>
-  <div class="right-panel"></div>
 </body>
 </html>
