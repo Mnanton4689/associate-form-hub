@@ -54,40 +54,45 @@
       pointer-events: none; /* Prevent clicks */
       cursor: not-allowed;
     }
-    /* Tooltip styling for disabled buttons */
-    .button.disabled::after {
-      content: "Coming Soon";
+    /* Tooltip styling */
+    .button.disabled .tooltip {
+      visibility: hidden;
+      opacity: 0;
       position: absolute;
-      top: 50%;
-      left: 105%;
-      transform: translateY(-50%);
+      bottom: -35px;
+      left: 50%;
+      transform: translateX(-50%);
       background: rgba(0, 0, 0, 0.8);
       color: #fff;
       padding: 5px 10px;
       font-size: 14px;
       border-radius: 4px;
-      opacity: 0;
       transition: opacity 0.3s;
       white-space: nowrap;
     }
-    .button.disabled:hover::after {
+    .button.disabled:hover .tooltip {
+      visibility: visible;
       opacity: 1;
     }
   </style>
 </head>
 <body>
   <div class="content">
-    <img src="https://cdn.bfldr.com/ALB571BD/at/85pzvrc4hn2kfcpcrjfxn_by_Avolta_RGB.eps?auto=webp&format=png
+    <img src="https://cdn.bfldr.com/ALB571BD/at/85pzvrc4hn2kfcpcrjfxwxr5/Hudson_by_Avolta_RGB.eps&format=png
     <h1>Associate Submission Forms</h1>
 
     <!-- Original Buttons -->
-    <a class="button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5WlhRV0xST1FGRUhXMC4u
-    <a class="button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUQ1lONFZFN1pESzBSUzBOnset Counts</a>
-    <a class="button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6kIzUzFYWkxCVS4uReport Lost Item</a>
+    <a class="button" href="https://forms.office.com/id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNURThYNEJaQUxPSDdEWlhRV0xST1FGRUhXMC4uDaily NewsStand Counts</a>
+    <a class="button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUQ1lONFZFN1pESzBSUzBOOEFXVEQ4WVBGUC>
+    <a class="button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUMUQ0WkxCVS4uReport Lost Item</a>
 
     <!-- Disabled Buttons with Tooltip -->
-    <a class="button disabled">Drink Order</a>
-    <a class="button disabled">Food Order</a>
+    <a class="button disabled">Drink Order
+      <span class="tooltip">Coming Soon</span>
+    </a>
+    <a class="button disabled">Food Order
+      <span class="tooltip">Coming Soon</span>
+    </a>
   </div>
 </body>
 </html>
