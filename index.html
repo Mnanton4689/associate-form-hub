@@ -1,70 +1,135 @@
-<!DOCTYPE html>  v.002
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Hudson Associate Hub</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Associate Submission Forms</title>
+
   <style>
+    :root {
+      --brand-blue: rgba(0, 120, 212, 0.9);
+      --brand-blue-hover: rgba(0, 90, 158, 0.9);
+      --disabled-bg: #9aa0a6;
+      --disabled-text: #f1f3f4;
+      --drink-hover: #ff9800;
+      --food-hover: #4caf50;
+
+      --space-1: clamp(6px, 1.2vw, 8px);
+      --space-2: clamp(10px, 2vw, 14px);
+      --space-3: clamp(14px, 3vw, 20px);
+      --space-4: clamp(18px, 4vw, 28px);
+
+      --font-lg: clamp(18px, 2.6vw, 22px);
+      --font-xl: clamp(22px, 4vw, 32px);
+
+      --button-radius: 12px;
+      --button-pad-v: clamp(12px, 2.5vw, 16px);
+      --button-pad-h: clamp(16px, 4vw, 28px);
+      --button-width-desktop: 320px;
+      --tap-min-height: 48px;
+    }
+
+    * { box-sizing: border-box; }
     html, body {
       height: 100%;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-image: url('https://cdn.bfldr.com/ALB571BD/at/q4jgx7nr9rcg9mfnjsmj55x/HMS_Host_ORD_793.jpg?format=jpg&crop=7364%2C4729%2Cx445%2Cy535');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      color: #ffffff;
-    }
-    .content {
-      text-align: center;
-      padding: 40px;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-    h1 {
-      color: #ffffff;
-      text-shadow: 1px 1px 2px #000;
-    }
-    .logo {
-      width: 200px;
-      margin-bottom: 20px;
-    }
-    .button {
-      display: block;
-      margin: 20px auto;
-      padding: 15px 30px;
-      font-size: 18px;
-      background-color: rgba(0, 120, 212, 0.9);
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      width: 250px;
-      transition: background-color 0.3s;
-    }
-    .button:hover {
-      background-color: rgba(0, 90, 158, 0.9);
-    }
-    /* Disabled state */
-    .button.is-disabled {
-      background-color: #9aa0a6;    /* grey*/
-      color: #f1f3f4;
+      padding: 0;
+      -webkit-text-size-adjust: 100%;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: #0f172a;
+      background: #f8fafc;
     }
 
-    .drink-btn{
-      background-color: #ED8A40;
+    .content {
+      max-width: min(720px, 100%);
+      margin: 0 auto;
+      padding: var(--space-4) var(--space-3) calc(var(--space-4) * 1.5);
+      text-align: center;
     }
-    .food-btn {
-      background-color: #C5F85A;
+
+    .logo {
+      display: block;
+      max-width: min(280px, 80%);
+      height: auto;
+      margin: 0 auto var(--space-3);
+    }
+
+    h1 {
+      font-size: var(--font-xl);
+      margin: 0 0 var(--space-3) 0;
+      line-height: 1.2;
+      letter-spacing: 0.2px;
+    }
+
+    .button {
+      display: block;
+      margin: var(--space-2) auto;
+      padding: var(--button-pad-v) var(--button-pad-h);
+      font-size: var(--font-lg);
+      background-color: var(--brand-blue);
+      color: white;
+      text-decoration: none;
+      border-radius: var(--button-radius);
+      width: 100%;
+      max-width: var(--button-width-desktop);
+      transition: background-color 0.25s ease, transform 0.1s ease;
+      text-align: center;
+      min-height: var(--tap-min-height);
+      line-height: 1.2;
+      cursor: pointer;
+      border: none;
+    }
+
+    .button:hover {
+      background-color: var(--brand-blue-hover);
+    }
+
+    .button:active {
+      transform: scale(0.99);
+    }
+
+    /* Disabled base */
+    .button.is-disabled {
+      background-color: var(--disabled-bg);
+      color: var(--disabled-text);
+      cursor: not-allowed;
+    }
+
+    /* Hover colors for disabled buttons */
+    .button.is-disabled.drink-btn:hover {
+      background-color: var(--drink-hover);
+      color: #fff;
+    }
+    .button.is-disabled.food-btn:hover {
+      background-color: var(--food-hover);
+      color: #fff;
     }
   </style>
 </head>
 <body>
   <div class="content">
-    <img src="https://cdn.bfldr.com/ALB571BD/at/85pzvrc4hn2kfcpcrjfxwxr5/Hudson_by_Avolta_RGB.eps?auto=webp&format=png" alt="Avolta Logo" class="logo">
-    <h1>Associate Submisson Forms</h1>
-    <a class="button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNURThYNEJaQUxPSDdEWlhRV0xST1FGRUhXMC4u" target="_blank">Daily NewsStand Counts</a>
-    <a class="button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUQ1lONFZFN1pESzBSUzBOOEFXVEQ4WVBGUC4u" target="_blank">5th & Sunset Counts</a> 
-    <a class="button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUMUQ0UFM5RU8yOVZCT0Q1NkIzUzFYWkxCVS4u" target="_blank">Report Lost Item</a>
-    <a class="button is-disabled drink-btn" role="button" aria-disabled= "true" tableindex= "-1" title= "Coming Soon">Drink Order</a>
-    <a class="button is-disabled food-btn" role="button" aria-disabled= "true" tableindex= "-1" title= "Coming Soon">Food Order</a>
+    <img
+      src="https://cdn.bfldr.com/ALB571BD/at/85pzvrc4hn2kfcpcrjfxwxr5/Hudson_by_Avolta_RGB.eps?auto=webp&format=png"
+e Submission Forms</h1>
+
+    <a class="button"
+       href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNURThYNEJaQUxPSDdEWlhRV0xST1FGRUhXMC4  <a class="button"
+       href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUQ1lONFZFN1pESzBSUzBOOEFXVEQ4WVBGUC4u"
+      ss="button"
+       href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUMUQ0UFM5RU8yOVZCT0Q1NkIz>
+
+    <!-- Disabled buttons (non-navigable, hover shows orange/green; not focusable) -->
+    <a class="button is-disabled drink-btn"
+       role="button"
+       aria-disabled="true"
+       tabindex="-1"
+       title="Coming soon">Drink Order Coming Soon</a>
+
+    <a class="button is-disabled food-btn"
+       role="button"
+       aria-disabled="true"
+       tabindex="-1"
+       title="Coming soon">Food Order Coming Soon</a>
   </div>
 </body>
-</html>
+
