@@ -19,7 +19,7 @@
       padding: 40px;
       background-color: rgba(0, 0, 0, 0.5);
       max-width: 600px;
-      margin: auto;
+      margin: 60px auto;
       border-radius: 10px;
     }
     h1 {
@@ -55,13 +55,13 @@
       cursor: not-allowed;
     }
     /* Tooltip styling */
-    .button.disabled .tooltip {
+    .tooltip {
       visibility: hidden;
       opacity: 0;
       position: absolute;
-      bottom: -35px;
-      left: 50%;
-      transform: translateX(-50%);
+      top: 50%;
+      left: 105%;
+      transform: translateY(-50%);
       background: rgba(0, 0, 0, 0.8);
       color: #fff;
       padding: 5px 10px;
@@ -69,6 +69,7 @@
       border-radius: 4px;
       transition: opacity 0.3s;
       white-space: nowrap;
+      z-index: 10;
     }
     .button.disabled:hover .tooltip {
       visibility: visible;
@@ -78,15 +79,11 @@
 </head>
 <body>
   <div class="content">
-    <img src="https://cdn.bfldr.com/ALB571BD/at/85pzvrc4hn2kfcpcrjfxwxr5/Hudson_by_Avolta_RGB.eps&format=png
-    <h1>Associate Submission Forms</h1>
+    <img src="https://cdn.bfldr.com/ALB571BD/at/85pzvrc4hn2kfcpcrjfxwxr5/Hudson_by_Avolta_RGB.eps?auto=webp&format=png" alt="Avolta Logo" class="h1>
 
     <!-- Original Buttons -->
-    <a class="button" href="https://forms.office.com/id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNURThYNEJaQUxPSDdEWlhRV0xST1FGRUhXMC4uDaily NewsStand Counts</a>
-    <a class="button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUQ1lONFZFN1pESzBSUzBOOEFXVEQ4WVBGUC>
-    <a class="button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUMUQ0WkxCVS4uReport Lost Item</a>
-
-    <!-- Disabled Buttons with Tooltip -->
+    <a class="button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNURThYNEJaQUxPSDdEWlhRV0xST1FGRounts</a>
+    <a class="button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUQ1lONFZFN1pESzBSUzBOOEFXVEQ4WVBGUC4u" target="_blanktton" href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUMUQ0UFM5RU8yOVZCT0Q1NkIzUzFYWkxCVS    <!-- Disabled Buttons with Tooltip -->
     <a class="button disabled">Drink Order
       <span class="tooltip">Coming Soon</span>
     </a>
