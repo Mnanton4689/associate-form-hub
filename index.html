@@ -1,12 +1,43 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  v.003
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <!-- Make the page scale correctly on mobile -->
+  <!-- Mobile scaling so it doesn’t render tiny on phones -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Associate Submission Forms</title>
+  <title>Hudson Associate Hub</title>
 
   <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('https://cdn.bfldr.com/ALB571BD/at/q4jgx7nr9rcg9mfnjsmj55x/HMS_Host_ORD_793.jpg?format=jpg&crop=7364%2C4729%2Cx445%2Cy535');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      color: #ffffff;
+    }
+
+    .content {
+      text-align: center;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.5); /* keep your overlay */
+    }
+
+    h1 {
+      color: #ffffff;
+      text-shadow: 1px 1px 2px #000;
+      margin-top: 0;
+    }
+
+    .logo {
+      width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
     .button {
       display: block;
       margin: 20px auto;
@@ -16,8 +47,8 @@
       color: white;
       text-decoration: none;
       border-radius: 8px;
-      width: 250px;                 /* Keep your original width on larger screens */
-      transition: background-color 0.3s;
+      width: 250px; /* keep your original width on larger screens */
+      transition: background-color 0.3s ease;
       text-align: center;
       cursor: pointer;
     }
@@ -26,37 +57,34 @@
       background-color: rgba(0, 90, 158, 0.9);
     }
 
-    /* Disabled base style: greyed out, non-navigable (we remove href in HTML) */
+    /* Disabled base: greyed out */
     .button.is-disabled {
-      background-color: #9aa0a6;    /* Grey */
+      background-color: #9aa0a6; /* grey */
       color: #f1f3f4;
       cursor: not-allowed;
-      /* Do NOT use pointer-events:none so hover colors still work */
     }
 
-    /* Hover colors for disabled buttons */
+    /* Disabled hover colors: grey by default; color only on hover */
     .button.is-disabled.drink-btn:hover {
-      background-color: #ff9800;    /* Orange for Drink */
+      background-color: #ED8A40; /* orange */
       color: #ffffff;
     }
-
     .button.is-disabled.food-btn:hover {
-      background-color: #4caf50;    /* Green for Food */
+      background-color: #4CAF50; /* green */
       color: #ffffff;
     }
 
-    /* --- Mobile-friendly adjustments (minimal) --- */
+    /* Mobile-friendly adjustments (minimal) */
     @media (max-width: 480px) {
       .content {
         padding: 16px;
-        text-align: center;
       }
       .logo {
-        max-width: 80%;
-        height: auto;
+        width: 80%;
+        max-width: 260px;
       }
       .button {
-        width: 100%;                /* Full width on phones for easy tapping */
+        width: 100%;   /* full width on phones for easier tapping */
         max-width: none;
       }
     }
@@ -64,24 +92,29 @@
 </head>
 <body>
   <div class="content">
-    <img src="https://cdn.bfldr.com/ALB571BD/at/85pzvrc4hn2kfcpcrjfxwxr5/Hudson_by_Avolta_RGB.eps?auto=webp&format=png" alt="Avolta Logo Forms</h1>
+    https://cdn.bfldr.com/ALB571BD/at/85pzvrc4hn2kfcpcrjfxwxr5/Hudson_by_Avolta_RGB.eps?auto=webp&format=png
+
+    <h1>Associate Submisson Forms</h1>
 
     <!-- Live buttons -->
-    <a class="button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNURThYNEJaQUxPSDdEWlhRV0xST1FGRUhXMC4u" target="_lass="button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUQ1lONFZFN1pESzBSUzBOOEFXVEQ4WVBGUC4u"a>
-    <a class="button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUMUQ0UFMCVS4uReport Lost Item</a>
+    https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNURThYNEJaQUxPSDdEWlhRV0xST1FGRUhXMC4uDaily NewsStand Counts</a>
+
+    <a class="button"
+       href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUQ1lONFZFN1pESzBSUzBOOEFXVEQ4WVBGUC4u"
+       target.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUMUQ0UFM5RU8yOVZCT0Q1NkIzUzFYWkxCVS4uReport Lost Item</a>
 
     <!-- Disabled buttons (non-navigable, grey base; orange/green on hover; not in tab order) -->
     <a class="button is-disabled drink-btn"
        role="button"
        aria-disabled="true"
        tabindex="-1"
-       title="Coming soon">Drink Order Coming Soon</a>
+       title="Coming Soon">Drink Order</a>
 
     <a class="button is-disabled food-btn"
        role="button"
        aria-disabled="true"
        tabindex="-1"
-       title="Coming soon">Food Order Coming Soon</a>
+       title="Coming Soon">Food Order</a>
   </div>
 </body>
 </html>
