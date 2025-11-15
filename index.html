@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <!-- Ensure proper mobile scaling -->
+  <!-- Proper mobile scaling -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hudson Associate Hub</title>
 
@@ -19,12 +19,13 @@
       color: #ffffff;
     }
 
-    /* Keep your look, center and pad content */
+    /* Content overlay */
     .content {
       text-align: center;
       padding: 40px;
       background-color: rgba(0, 0, 0, 0.5);
-      max-width: 100%;
+      /* Prevent the layout from feeling too wide on phones */
+      margin: 0 auto;
       box-sizing: border-box;
     }
 
@@ -34,7 +35,6 @@
       margin-top: 0;
     }
 
-    /* Make logo responsive without changing your default size */
     .logo {
       width: 200px;
       height: auto;
@@ -48,49 +48,52 @@
       margin: 20px auto;
       padding: 15px 30px;
       font-size: 18px;
-      background-color: rgba(0, 120, 212, 0.9);
+      background-color: rgba(0, 120, 212, 0.9); /* base blue */
       color: white;
       text-decoration: none;
       border-radius: 8px;
       width: 250px;                 /* keep your desktop/tablet width */
-      transition: background-color 0.3s;
+      transition: background-color 0.3s ease;
       text-align: center;
       cursor: pointer;
       box-sizing: border-box;
     }
 
-    .button:hover {
+    /* Hover for normal (enabled) buttons */
+    .button:not(.is-disabled):hover {
       background-color: rgba(0, 90, 158, 0.9);
     }
 
-    /* Disabled base (grey) */
+    /* Disabled base: FORCE grey to win over base blue */
     .button.is-disabled {
-      background-color: #9aa0a6;    /* grey */
+      background-color: #9aa0a6 !important; /* ensure grey wins */
       color: #f1f3f4;
       cursor: not-allowed;
     }
 
     /* Disabled hover colors (only on hover; base stays grey) */
     .button.is-disabled.drink-btn:hover {
-      background-color: #ED8A40;    /* orange */
+      background-color: #ED8A40;  /* orange */
       color: #ffffff;
     }
     .button.is-disabled.food-btn:hover {
-      background-color: #4CAF50;    /* green */
+      background-color: #4CAF50;  /* green */
       color: #ffffff;
     }
 
-    /* Mobile-friendly adjustments (minimal) */
+    /* Mobile-friendly adjustments (minimal & comfortable) */
     @media (max-width: 480px) {
       .content {
         padding: 16px;
+        width: 100%;
+        max-width: 420px;  /* prevent the content from feeling too wide */
       }
       .logo {
         width: 80%;
         max-width: 260px;
       }
       .button {
-        width: 100%;                /* full width on phones for easy tapping */
+        width: 100%;       /* full width on phones for easy tapping */
         max-width: none;
       }
     }
@@ -100,12 +103,14 @@
   <div class="content">
     <img
       src="https://cdn.bfldr.com/ALB571BD/at/85pzvrc4hn2kfcpcrjfxwxr5/Hudson_by_Avolta_RGB.eps?auto=webp&format=png"
-      alt="Avolta Logo"
-      class="logo"
-    -->
+      alt="A Forms</h1>
+
+    <!-- Live buttons -->
     <a class="button"
-       href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNURThYNEJaQUxPSDdEWlhRV0xST1FGRUhXMC4u"
-      /forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUQ1lONFZFN1pESzBSUzBOOEFXVEQ4WVBGUC4u5th &amp; Sunset Counts</a>
+       href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNURThYNEJaly NewsStand Counts</a>
+
+    <a class="button"
+       href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUQ1lONFZFN1pESzBSunset Counts</a>
 
     <a class="button"
        href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUMUQ0UFM5RU8yLost Item</a>
