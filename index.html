@@ -1,8 +1,8 @@
-<!DOCTYPE html>  v.003
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <!-- Mobile scaling so it doesn’t render tiny on phones -->
+  <!-- Ensure proper mobile scaling -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hudson Associate Hub</title>
 
@@ -19,10 +19,13 @@
       color: #ffffff;
     }
 
+    /* Keep your look, center and pad content */
     .content {
       text-align: center;
       padding: 40px;
-      background-color: rgba(0, 0, 0, 0.5); /* keep your overlay */
+      background-color: rgba(0, 0, 0, 0.5);
+      max-width: 100%;
+      box-sizing: border-box;
     }
 
     h1 {
@@ -31,11 +34,13 @@
       margin-top: 0;
     }
 
+    /* Make logo responsive without changing your default size */
     .logo {
       width: 200px;
       height: auto;
       margin-bottom: 20px;
       display: inline-block;
+      max-width: 80%;
     }
 
     .button {
@@ -47,30 +52,31 @@
       color: white;
       text-decoration: none;
       border-radius: 8px;
-      width: 250px; /* keep your original width on larger screens */
-      transition: background-color 0.3s ease;
+      width: 250px;                 /* keep your desktop/tablet width */
+      transition: background-color 0.3s;
       text-align: center;
       cursor: pointer;
+      box-sizing: border-box;
     }
 
     .button:hover {
       background-color: rgba(0, 90, 158, 0.9);
     }
 
-    /* Disabled base: greyed out */
+    /* Disabled base (grey) */
     .button.is-disabled {
-      background-color: #9aa0a6; /* grey */
+      background-color: #9aa0a6;    /* grey */
       color: #f1f3f4;
       cursor: not-allowed;
     }
 
-    /* Disabled hover colors: grey by default; color only on hover */
+    /* Disabled hover colors (only on hover; base stays grey) */
     .button.is-disabled.drink-btn:hover {
-      background-color: #ED8A40; /* orange */
+      background-color: #ED8A40;    /* orange */
       color: #ffffff;
     }
     .button.is-disabled.food-btn:hover {
-      background-color: #4CAF50; /* green */
+      background-color: #4CAF50;    /* green */
       color: #ffffff;
     }
 
@@ -84,7 +90,7 @@
         max-width: 260px;
       }
       .button {
-        width: 100%;   /* full width on phones for easier tapping */
+        width: 100%;                /* full width on phones for easy tapping */
         max-width: none;
       }
     }
@@ -92,18 +98,19 @@
 </head>
 <body>
   <div class="content">
-    https://cdn.bfldr.com/ALB571BD/at/85pzvrc4hn2kfcpcrjfxwxr5/Hudson_by_Avolta_RGB.eps?auto=webp&format=png
-
-    <h1>Associate Submisson Forms</h1>
-
-    <!-- Live buttons -->
-    https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNURThYNEJaQUxPSDdEWlhRV0xST1FGRUhXMC4uDaily NewsStand Counts</a>
+    <img
+      src="https://cdn.bfldr.com/ALB571BD/at/85pzvrc4hn2kfcpcrjfxwxr5/Hudson_by_Avolta_RGB.eps?auto=webp&format=png"
+      alt="Avolta Logo"
+      class="logo"
+    -->
+    <a class="button"
+       href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNURThYNEJaQUxPSDdEWlhRV0xST1FGRUhXMC4u"
+      /forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUQ1lONFZFN1pESzBSUzBOOEFXVEQ4WVBGUC4u5th &amp; Sunset Counts</a>
 
     <a class="button"
-       href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUQ1lONFZFN1pESzBSUzBOOEFXVEQ4WVBGUC4u"
-       target.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUMUQ0UFM5RU8yOVZCT0Q1NkIzUzFYWkxCVS4uReport Lost Item</a>
+       href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUMUQ0UFM5RU8yLost Item</a>
 
-    <!-- Disabled buttons (non-navigable, grey base; orange/green on hover; not in tab order) -->
+    <!-- Disabled buttons (no href = cannot navigate; removed from tab order) -->
     <a class="button is-disabled drink-btn"
        role="button"
        aria-disabled="true"
