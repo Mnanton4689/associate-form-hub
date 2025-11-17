@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>  v.002
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <!-- Proper mobile scaling -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hudson Associate Hub</title>
-
   <style>
     html, body {
       height: 100%;
@@ -18,115 +14,57 @@
       background-attachment: scroll;
       color: #ffffff;
     }
-
-    /* Content overlay */
     .content {
       text-align: center;
       padding: 40px;
       background-color: rgba(0, 0, 0, 0.5);
-      /* Prevent the layout from feeling too wide on phones */
-      margin: 0 auto;
-      box-sizing: border-box;
     }
-
     h1 {
       color: #ffffff;
       text-shadow: 1px 1px 2px #000;
-      margin-top: 0;
     }
-
     .logo {
       width: 200px;
-      height: auto;
       margin-bottom: 20px;
-      display: inline-block;
-      max-width: 80%;
     }
-
     .button {
       display: block;
       margin: 20px auto;
       padding: 15px 30px;
       font-size: 18px;
-      background-color: rgba(0, 120, 212, 0.9); /* base blue */
+      background-color: rgba(0, 120, 212, 0.9);
       color: white;
       text-decoration: none;
       border-radius: 8px;
-      width: 250px;                 /* keep your desktop/tablet width */
-      transition: background-color 0.3s ease;
-      text-align: center;
-      cursor: pointer;
-      box-sizing: border-box;
+      width: 250px;
+      transition: background-color 0.3s;
     }
-
-    /* Hover for normal (enabled) buttons */
-    .button:not(.is-disabled):hover {
+    .button:hover {
       background-color: rgba(0, 90, 158, 0.9);
     }
-
-    /* Disabled base: FORCE grey to win over base blue */
+    /* Disabled state */
     .button.is-disabled {
-      background-color: #9aa0a6 !important; /* ensure grey wins */
+      background-color: #9aa0a6;    /* grey*/
       color: #f1f3f4;
-      cursor: not-allowed;
     }
 
-    /* Disabled hover colors (only on hover; base stays grey) */
-    .button.is-disabled.drink-btn:hover {
-      background-color: #ED8A40;  /* orange */
-      color: #ffffff;
+    .drink-btn{
+      background-color: #ED8A40;
     }
-    .button.is-disabled.food-btn:hover {
-      background-color: #4CAF50;  /* green */
-      color: #ffffff;
-    }
-
-    /* Mobile-friendly adjustments (minimal & comfortable) */
-    @media (max-width: 480px) {
-      .content {
-        padding: 16px;
-        width: 100%;
-        max-width: 420px;  /* prevent the content from feeling too wide */
-      }
-      .logo {
-        width: 80%;
-        max-width: 260px;
-      }
-      .button {
-        width: 100%;       /* full width on phones for easy tapping */
-        max-width: none;
-      }
+    .food-btn {
+      background-color: #C5F85A;
     }
   </style>
 </head>
 <body>
   <div class="content">
-    <img
-      src="https://cdn.bfldr.com/ALB571BD/at/85pzvrc4hn2kfcpcrjfxwxr5/Hudson_by_Avolta_RGB.eps?auto=webp&format=png"
-      alt="A Forms</h1>
-
-    <!-- Live buttons -->
-    <a class="button"
-       href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNURThYNEJaly NewsStand Counts</a>
-
-    <a class="button"
-       href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUQ1lONFZFN1pESzBSunset Counts</a>
-
-    <a class="button"
-       href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUMUQ0UFM5RU8yLost Item</a>
-
-    <!-- Disabled buttons (no href = cannot navigate; removed from tab order) -->
-    <a class="button is-disabled drink-btn"
-       role="button"
-       aria-disabled="true"
-       tabindex="-1"
-       title="Coming Soon">Drink Order</a>
-
-    <a class="button is-disabled food-btn"
-       role="button"
-       aria-disabled="true"
-       tabindex="-1"
-       title="Coming Soon">Food Order</a>
+    <img src="https://cdn.bfldr.com/ALB571BD/at/85pzvrc4hn2kfcpcrjfxwxr5/Hudson_by_Avolta_RGB.eps?auto=webp&format=png" alt="Avolta Logo" class="logo">
+    <h1>Associate Submisson Forms</h1>
+    <a class="button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNURThYNEJaQUxPSDdEWlhRV0xST1FGRUhXMC4u" target="_blank">Daily NewsStand Counts</a>
+    <a class="button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUQ1lONFZFN1pESzBSUzBOOEFXVEQ4WVBGUC4u" target="_blank">5th & Sunset Counts</a> 
+    <a class="button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=lXqO6gmxp0-uTPU3K3YZrkWWHNykNi9NtOV5OjCx6yNUMUQ0UFM5RU8yOVZCT0Q1NkIzUzFYWkxCVS4u" target="_blank">Report Lost Item</a>
+    <a class="button is-disabled drink-btn" role="button" aria-disabled= "true" tableindex= "-1" title= "Coming Soon">Drink Order</a>
+    <a class="button is-disabled food-btn" role="button" aria-disabled= "true" tableindex= "-1" title= "Coming Soon">Food Order</a>
   </div>
 </body>
 </html>
